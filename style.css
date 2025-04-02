@@ -1,0 +1,339 @@
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background-color:#f1f1f1;
+    color:#111;
+    
+}
+
+/* Barre de navigation */
+header {
+    
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px ;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0);
+    transition: background-color 0.6s ease, box-shadow 0.6s ease, padding 0.6s ease;
+}
+
+header.scrolled {
+    background: #124a77;
+}
+
+.logo {
+    font-size: 22px;
+    flex: 1;
+    margin-right: 20px; 
+}
+nav {
+    flex-grow: 1; /* Allow the nav to take available space */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    
+    /* background: url(images/electric-neon-colorful-dark-background-lighting-3840x2160-2654.jpg) no-repeat center center/cover; */
+    background:linear-gradient(135deg, #12bfc5, #00043b);
+    background-size: cover;
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    align-items: flex-start;
+    
+    color: white;
+    padding: 70px 40px 40px 40px;
+    
+}
+
+
+
+.btn {
+    background: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-left: 250px;
+}
+
+.btn:hover {
+    background: #e6b800;
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating-img {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Sections */
+section {
+    
+    padding: 60px 80px;
+    text-align: center;
+    color:#111 ;
+}
+
+
+#courses {
+    background: #f1f1f1;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Grille des cours */
+.course-grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.course-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+/* Contact */
+#contact {
+    background: #222;
+    color: white;
+}
+
+#contact a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+
+  }
+  .container2 {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background: white;
+    padding: 20px;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.section {
+    flex: 1; /* Each box takes equal width */
+    height: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #e3e3e3;
+    border-radius: 5px;
+    /*margin-left: 0;  Override any auto margin */
+    /*margin-right: auto; /* Ensure it stays to the left */
+    text-align: center;
+}
+ .centred-img{
+    margin: auto;
+ }
+
+
+ .main{
+    color:#444;
+    text-align: left;
+    font-size: 20px;
+    line-height: 40px;
+    
+ }
+
+ .apropos{
+    padding: 0%;
+    margin-left: 80px;
+    
+    
+ }
+
+ .foo{
+    padding-top:0%;
+    margin-top: 100px;
+    
+ }
+
+ /* Style 7
+   ----------------------------- */
+.seven{
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.seven h2 {
+    text-align: center;
+        font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+        text-transform: uppercase;
+    
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+    
+    .seven h2:after,.seven h2:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #12bfc5;
+        border-top: 1px solid #12bfc5;
+        height: 5px;
+      background-color:#f8f8f8;
+    }
+
+    /* ============================================*/
+    .crypto-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        counter-reset: crypto-counter;
+    }
+    
+    .crypto-list li {
+        padding: 16px 20px 16px 60px;
+        margin-bottom: 8px;
+        position: relative;
+        transition: all 0.2s ease;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+    }
+    
+    .crypto-list li:before {
+        content: counter(crypto-counter);
+        counter-increment: crypto-counter;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 28px;
+        height: 28px;
+        background-color: #12bfc5;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .crypto-list li:hover {
+        background-color: #f0f4f8;
+        transform: translateX(4px);
+    }
+    
+    .list-title {
+        color: #12bfc5;
+        font-size: 24px;
+        margin-bottom: 25px;
+        font-weight: 600;
+        text-align: center;
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    .list-title:after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 3px;
+        background-color: #12bfc5;
+        margin: 10px auto 0;
+    }
+    
+    @media (max-width: 600px) {
+        body {
+            padding: 20px 15px;
+        }
+        
+        .crypto-list li {
+            padding: 14px 15px 14px 50px;
+        }
+        
+        .crypto-list li:before {
+            left: 15px;
+        }
+    }
+
