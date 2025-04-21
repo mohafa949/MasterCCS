@@ -1,0 +1,265 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    color:#111;
+}
+.semester{
+    margin-top: 180px;
+}
+
+
+/************* header ***************/
+header {
+    
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px ;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #124a77;
+    transition: background-color 0.6s ease, box-shadow 0.6s ease, padding 0.6s ease;
+}
+.logo {
+    font-size: 22px;
+    flex: 1;
+    margin-right: 20px; 
+}
+nav {
+    flex-grow: 1; /* Allow the nav to take available space */
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+
+  }
+
+/******** heading 1 stile ************/
+
+.fancy-heading {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    color: #12BFC5;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin: 30px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, transparent, rgba(18, 191, 197, 0.1), transparent);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 2px solid rgba(18, 191, 197, 0.3);
+}
+
+
+
+ /* Style 7
+   ----------------------------- */
+   .seven{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.seven h2 {
+    text-align: center;
+        font-size:40px; font-weight:300; color:#222; letter-spacing:1px;
+        text-transform: uppercase;
+    
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center;
+    }
+    
+    .seven h2:after,.seven h2:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #12bfc5;
+        border-top: 1px solid #12bfc5;
+        height: 5px;
+      background-color:#f8f8f8;
+    }
+
+/*============================================*/
+/*********** heading 3 stile ************/
+
+.fancy-h3 {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    color: #333; /* Dark text for better readability */
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 25px 0 0;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.fancy-h3::before {
+    position: absolute;
+    left: 0;
+    width: 15px;
+}
+
+
+
+/* Teal accent underline */
+.fancy-h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #12BFC5;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(18, 191, 197, 0.3);
+}
+
+/* Optional: Add teal to first word */
+.fancy-h3 span.teal-accent {
+    color: #12BFC5;
+    font-weight: 700;
+}
+
+/* Subtle hover effect */
+.fancy-h3:hover::after {
+    width: 80px;
+    transition: width 0.3s ease;
+    cursor: alias;
+}
+
+
+ /******************* footer *****************/ 
+#contact {
+    background: #222;
+    color: white;
+}
+
+#contact a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+section {
+    
+    padding: 60px 80px;
+    text-align: center;
+    color:#111 ;
+}
+
+/******************* crypto list ***************************/
+
+.crypto-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: crypto-counter;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.crypto-list li {
+    padding: 16px 20px 16px 60px;
+    margin-bottom: 8px;
+    position: relative;
+    transition: all 0.2s ease;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.crypto-list li:before {
+    content: counter(crypto-counter);
+    counter-increment: crypto-counter;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background-color: #12bfc5;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.crypto-list li:hover {
+    background-color: #f0f4f8;
+    transform: translateX(4px);
+}
+
+.list-title {
+    color: #12bfc5;
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.list-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #12bfc5;
+    margin: 10px auto 0;
+}
+
+/***************************************************************/
+
